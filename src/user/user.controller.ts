@@ -5,6 +5,8 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { ERole } from 'src/types';
 import { Roles } from 'src/roles/roles.decorator';
 import { RolesGuard } from 'src/roles/roles.guard';
+import { Public } from 'src/auth/constants';
+import { CreateTeacherDto } from './dto/create-teacher.dto';
 
 @Controller('user')
 @UseGuards(RolesGuard) // 👈 THÊM DÒNG NÀY
@@ -15,6 +17,20 @@ export class UserController {
   @Roles(ERole.ADMIN)
   create(@Body() createUserDto: CreateUserDto) {
     return this.userService.create(createUserDto);
+  }
+
+  // GetAllTeachers
+  @Public()
+  @Get('teacher')
+  getAllTeacher() {
+    return this.userService.getAllTeachers()
+  }
+
+  // CreateTeachers
+  @Public()
+  @Post('teacher')
+  createTeacher(@Body() createTeacherDto: CreateTeacherDto) {
+    return this.userService.createTeacher(createTeacherDto)
   }
 
   @Get()
