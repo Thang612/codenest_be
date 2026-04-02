@@ -3,7 +3,7 @@ import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Model } from 'mongoose';
 import { User } from './interfaces/user.interface';
-import { ERole } from 'src/types';
+import { ERole } from '../types';
 import { CreateTeacherDto } from './dto/create-teacher.dto';
 
 @Injectable()

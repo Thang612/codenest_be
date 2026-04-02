@@ -1,6 +1,6 @@
 // roles.decorator.ts
 import { SetMetadata } from '@nestjs/common';
-import { ERole } from 'src/types';
+import { ERole } from '../types';
 
 export const ROLES_KEY = 'roles';
 export const Roles = (...roles: ERole[]) =>

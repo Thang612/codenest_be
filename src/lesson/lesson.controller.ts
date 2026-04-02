@@ -5,7 +5,7 @@ import { UpdateLessonDto } from './dto/update-lesson.dto';
 import { Public } from 'src/auth/constants';
 import { RolesGuard } from 'src/roles/roles.guard';
 import { Roles } from 'src/roles/roles.decorator';
-import { ERole } from 'src/types';
+import { ERole } from '../types';
 
 @Controller('lesson')
 @UseGuards(RolesGuard)
