@@ -4,7 +4,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { Model } from 'mongoose';
 import { User } from './interfaces/user.interface';
 import { CreateTeacherDto } from './dto/create-teacher.dto';
-import { ERole } from 'src/types/role.enum';
+import { ERole } from '../types/role.enum';
 
 @Injectable()
 export class UserService {
