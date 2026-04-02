@@ -4,12 +4,13 @@ import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
 import { Roles } from 'src/roles/roles.decorator';
 import { RolesGuard } from 'src/roles/roles.guard';
-import { ERole } from 'src/types';
+import { ERole } from 'src/types/role.enum';
 
 @Controller('course')
 @UseGuards(RolesGuard)
 export class CourseController {
-  constructor(private readonly courseService: CourseService) { }
+  constructor(private readonly courseService: CourseService) {
+  }
 
   @Post()
   @Roles(ERole.ADMIN)
