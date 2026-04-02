@@ -1,6 +1,6 @@
 
 import { Document } from 'mongoose';
-import { ERole } from '../../types/role.enum';
+import { ERole } from 'src/types';
 
 export interface User extends Document {
     readonly name: string;
