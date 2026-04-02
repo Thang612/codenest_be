@@ -5,7 +5,7 @@ import {
     ExecutionContext,
 } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
-import { ERole } from '../types';
+import { ERole } from 'src/types';
 import { ROLES_KEY } from './roles.decorator';
 
 @Injectable()

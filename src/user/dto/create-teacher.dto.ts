@@ -1,4 +1,4 @@
-import { ERole } from "../types";
+import { ERole } from "src/types";
 
 export class CreateTeacherDto {
     readonly name = "";

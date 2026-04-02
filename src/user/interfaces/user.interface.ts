@@ -1,6 +1,6 @@
 
 import { Document } from 'mongoose';
-import { ERole } from '../types';
+import { ERole } from 'src/types';
 
 export interface User extends Document {
     readonly name: string;

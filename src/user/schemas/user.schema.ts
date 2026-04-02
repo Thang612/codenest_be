@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import { ERole } from '../types';
+import { ERole } from 'src/types';
 
 export const UserSchema = new mongoose.Schema(
     {
