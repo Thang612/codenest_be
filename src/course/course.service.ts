@@ -14,16 +14,17 @@ export class CourseService {
     return createCourse
   }
 
-  findAll() {
-    return `This action returns all course`;
+  async findAll() {
+    const course = await this.courseModel.find({ isDeleted: false })
+    return course
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} course`;
+  async findOne(id: string) {
+    return await this.courseModel.findById(id);
   }
 
-  update(id: number, updateCourseDto: UpdateCourseDto) {
-    return `This action updates a #${id} course`;
+  async update(id: number, updateCourseDto: UpdateCourseDto) {
+    return await this.courseModel.findByIdAndUpdate(id, updateCourseDto, { new: true });
   }
 
   remove(id: number) {

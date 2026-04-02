@@ -1,27 +1,27 @@
 import * as mongoose from 'mongoose';
 
-export const CourseSchema = new mongoose.Schema(
+export const LessonSchema = new mongoose.Schema(
     {
         title: {
             type: String,
             required: true
         },
-        slug: {
-            type: String,
-            required: true,
-            unique: true,
-        },
-        minAge: {
-            type: Number,
-            default: 0,
-        },
-        maxAge: {
-            type: Number,
-            default: 100,
-        },
-        description: {
+        content: {
             type: String,
             default: "",
+        },
+        materials: [{
+            title: String,
+            url: String,
+        }],
+        courseId: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Course',
+            required: true,
+        },
+        order: {
+            type: Number,
+            default: 0,
         },
         isDeleted: {
             type: Boolean,

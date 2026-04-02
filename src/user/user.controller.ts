@@ -20,8 +20,8 @@ export class UserController {
   }
 
   // GetAllTeachers
-  @Public()
   @Get('teacher')
+  @Roles(ERole.ADMIN)
   getAllTeacher() {
     return this.userService.getAllTeachers()
   }

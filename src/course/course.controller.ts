@@ -7,7 +7,7 @@ import { Roles } from 'src/roles/roles.decorator';
 import { RolesGuard } from 'src/roles/roles.guard';
 
 @Controller('course')
-@UseGuards(RolesGuard) 
+@UseGuards(RolesGuard)
 export class CourseController {
   constructor(private readonly courseService: CourseService) { }
 
@@ -18,21 +18,24 @@ export class CourseController {
   }
 
   @Get()
+  @Roles(ERole.ADMIN)
   findAll() {
     return this.courseService.findAll();
   }
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.courseService.findOne(+id);
+    return this.courseService.findOne(id);
   }
 
   @Patch(':id')
+  @Roles(ERole.ADMIN)
   update(@Param('id') id: string, @Body() updateCourseDto: UpdateCourseDto) {
     return this.courseService.update(+id, updateCourseDto);
   }
 
   @Delete(':id')
+  @Roles(ERole.ADMIN)
   remove(@Param('id') id: string) {
     return this.courseService.remove(+id);
   }

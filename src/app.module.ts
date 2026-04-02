@@ -6,9 +6,11 @@ import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { RolesModule } from './roles/roles.module';
 import { CourseModule } from './course/course.module';
+import { ClassModule } from './class/class.module';
+import { LessonModule } from './lesson/lesson.module';
 
 @Module({
-  imports: [DatabaseModule, UserModule, AuthModule, RolesModule, CourseModule],
+  imports: [DatabaseModule, UserModule, AuthModule, RolesModule, CourseModule, ClassModule, LessonModule],
   controllers: [AppController],
   providers: [AppService],
 })

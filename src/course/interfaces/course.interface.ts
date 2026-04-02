@@ -6,9 +6,8 @@ export interface Course extends Document {
 
     readonly minAge?: number;
     readonly maxAge?: number;
-
+    readonly description?: string;
     readonly isDeleted: boolean;
-
     readonly createdAt: Date;
     readonly updatedAt: Date;
 }
