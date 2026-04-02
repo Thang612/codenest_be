@@ -4,7 +4,7 @@ import { CreateCourseDto } from './dto/create-course.dto';
 import { UpdateCourseDto } from './dto/update-course.dto';
 import { Roles } from 'src/roles/roles.decorator';
 import { RolesGuard } from 'src/roles/roles.guard';
-import { ERole } from 'src/types';
+import { ERole } from 'src/common/enums/role.enum';
 
 @Controller('course')
 @UseGuards(RolesGuard)

@@ -4,7 +4,8 @@ import { CreateLessonDto } from './dto/create-lesson.dto';
 import { UpdateLessonDto } from './dto/update-lesson.dto';
 import { RolesGuard } from 'src/roles/roles.guard';
 import { Roles } from 'src/roles/roles.decorator';
-import { ERole } from 'src/types';
+import { ERole } from 'src/common/enums/role.enum';
+
 @Controller('lesson')
 @UseGuards(RolesGuard)
 export class LessonController {
