@@ -6,7 +6,7 @@ import { Roles } from 'src/roles/roles.decorator';
 import { RolesGuard } from 'src/roles/roles.guard';
 import { Public } from 'src/auth/constants';
 import { CreateTeacherDto } from './dto/create-teacher.dto';
-import { ERole } from '../types/role.enum';
+import { ERole } from '../../types/role.enum';
 
 @Controller('user')
 @UseGuards(RolesGuard) // 👈 THÊM DÒNG NÀY
